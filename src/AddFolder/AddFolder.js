@@ -8,7 +8,6 @@ export default class AddFolder extends Component {
     name: ""
   }
   handleInput = (e) => {
-    console.log(e.target.value);
     this.setState({
       name: e.target.value
     })
@@ -19,7 +18,6 @@ export default class AddFolder extends Component {
       {
         folder_name: this.state.name
       });
-    console.log(data);
     fetch(conf.API_ENDPOINT+"/folders", {
       method: "POST",
       body: data,

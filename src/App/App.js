@@ -20,6 +20,7 @@ class App extends Component {
   };
 
   handleAddFolder = folder => {
+    console.log(this.state.folders)
     this.setState({
       folders: [...this.state.folders, folder]
     });
